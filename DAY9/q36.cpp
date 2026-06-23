@@ -1,4 +1,4 @@
-// Program to write reverse pyramid.
+// Program to print reverse star pattern.
 
 #include <iostream>
 using namespace std;
@@ -9,12 +9,7 @@ int main() {
     cin >> rows;
 
     for (int i = rows; i >= 1; i--) {
-        // print spaces
-        for (int j = 1; j <= rows - i; j++) {
-            cout << " ";
-        }
-        // print stars
-        for (int k = 1; k <= (2 * i - 1); k++) {
+        for (int j = 1; j <= i; j++) {
             cout << "*";
         }
         cout << endl;

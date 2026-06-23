@@ -1,4 +1,4 @@
-// Program to input an display an array.
+// Program to rotate the array to the left.
 
 #include <iostream>
 using namespace std;
@@ -8,13 +8,21 @@ int main() {
     cout << "Enter size of array: ";
     cin >> n;
 
-    int arr[100]; 
+    int arr[n]; 
     cout << "Enter " << n << " elements:" << endl;
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    cout << "Array elements are:" << endl;
+    int first = arr[0];
+
+    for (int i = 0; i < n - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+
+    arr[n - 1] = first;
+
+    cout << "Array after left rotation:" << endl;
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
